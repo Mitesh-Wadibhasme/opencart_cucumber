@@ -59,13 +59,14 @@ public class SearchPage extends BasePage
 	
 	public boolean checkConfMsg()
 	{
-		try {
-		Assert.assertEquals(cnfMsg.isDisplayed(),true); 
-		  Assert.assertTrue(true);
-		}catch(Exception e)
+		try
 		{
-			Assert.fail();
+		return cnfMsg.isDisplayed();
 		}
-		return true;
+		catch(Exception e)
+		{
+			return false;
+		}
 	}
+
 }
